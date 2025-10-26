@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 60 jours</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Challenge 60 jours</h1>
+        <p class="subtitle">Quentin & Typhaine</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Colonne userA -->
+        <section class="person userA" data-user="userA">
+            <h2>Quentin</h2>
+
+            <div class="fixed-tasks">
+                <h3>Défis quotidiens</h3>
+                <ul id="fixed-userA" class="fixed-list"></ul>
+            </div>
+
+            <!-- section challenge de vacances -->
+            <div class="vacation-challenge">
+                <h3>Challenge de vacances</h3>
+            <!-- Utilisateur A -->
+            <div class="user-section userA">
+                <ul id="vacation-userA" class="challenge-list"></ul>
+                <div class="progress-bar-container userA">
+                    <div class="progress-bar" id="progress-userA"></div>
+                </div>
+            </div>
+
+                <ul id="vacation-userA" class="challenge-list"></ul>
+            </div>
+
+            <div class="todo">
+                <h3>To-do du jour</h3>
+                <form id="todo-form-userA" class="todo-form">
+                    <input type="text" name="todo" class="input-userA" placeholder="Ajouter une tâche..." required />
+                    <button type="submit">Ajouter</button>
+                </form>
+                <ul id="todo-list-userA" class="todo-list"></ul>
+            </div>
+        </section>
+
+        <!-- Colonne userB -->
+        <section class="person userB" data-user="userB">
+            <h2>Typhaine</h2>
+
+            <div class="fixed-tasks">
+                <h3>Défis quotidiens</h3>
+                <ul id="fixed-userB" class="fixed-list"></ul>
+            </div>
+
+            <!-- section challenge de vacances -->
+            <div class="vacation-challenge">
+            <h3>Challenge de vacances</h3>
+            <div class="user-section userB">
+                <ul id="vacation-userB" class="challenge-list"></ul>
+                <div class="progress-bar-container userB">
+            <div class="progress-bar" id="progress-userB"></div>
+            </div>
+    
+            <ul id="vacation-userB" class="challenge-list"></ul>
+            
+            
+
+            <div class="todo">
+                <h3>To-do du jour</h3>
+                <form id="todo-form-userB" class="todo-form">
+                    <input type="text" name="todo" class="input-userB" placeholder="Ajouter une tâche..." required />
+                    <button type="submit">Ajouter</button>
+                </form>
+                <ul id="todo-list-userB" class="todo-list"></ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <small>Reset quotidien automatique à 03:00</small>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

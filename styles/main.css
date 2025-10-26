@@ -1,0 +1,295 @@
+:root {
+    --bg: #fbfbfd;
+    --card: #ffffff;
+    --muted: #ae7955;
+    --accent: #1f6feb;
+
+    --honey : #f6d110;
+    --butter : #fff9c7;
+    --blue : #81ceeb;
+    --sky : #e6f2f4;
+
+    --radius: 12px;
+    --gap: 18px;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, "Helvetica Neue", Arial;
+    background-color: var(--bg);
+    color: var(--blue);
+}
+
+header {
+    padding: 20px;
+    font-family: "BBH Sans Bartle";
+    text-align: center;
+    background: linear-gradient(90deg, #fff 0%, #f7fbff 100%);
+    border-bottom: 1px solid #eef2ff;
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    color: var(--honey);
+}
+
+.container {
+    display: grid;
+    font-family: "Rammetto One";
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sky);
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+/* User A checkbox */
+.person.userA input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--blue);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* User A checkbox coché */
+.person.userA input[type="checkbox"]:checked {
+    background-color: var(--blue); /* bleu pour Quentin */
+    border-color: var(--blue);
+}
+
+/* User B checkbox */
+.person.userB input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--honey);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* User B checkbox coché */
+.person.userB input[type="checkbox"]:checked {
+    background-color: var(--honey); /* jaune pour Typhaine */
+    border-color: var(--honey);
+}
+
+
+
+.person.userA {
+    background-color: var(--sky); /*tintin*/
+    color : var(--blue) ;
+}
+
+.person.userB {
+    background-color: var(--butter); /* typhaine */
+    color : var(--honey) ;
+}
+
+.person {
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: 0 4px 14px rgba(18,24,56,0.03);
+    min-height: 360px;
+}
+
+/* Si tu veux que les titres soient aussi colorés séparément */
+.person.userA h2, .person.userA h3 {
+    color: #1a3d6d;
+}
+.person.userB h2, .person.userB h3 {
+    color: #f5a142;
+}
+
+.person h2 { margin: 0 0 8px 0; }
+.person h3 { margin: 12px 0 8px 0; font-size: 0.95rem; color: var(--muted); }
+
+
+.fixed-list, .todo-list { list-style: none; padding:0; margin:0; }
+.fixed-list li, .todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background .15s;
+}
+.fixed-list li:hover, .todo-list li:hover { background: #f8fafb; }
+.fixed-list input[type="checkbox"], .todo-list input[type="checkbox"] { width: 18px; height: 18px; }
+
+.todo-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.todo-form input[type="text"] {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 0;
+}
+
+.input-userA {
+    background: var(--butter);  /* couleur barre pour tintin */
+    color: var(--butter);
+    font-family: "Rammetto One";
+}
+
+.input-userB {
+    background: var(--sky);  /* couleur barre pour typh */
+    color: var(--sky);
+    font-family: "Rammetto One";
+}
+
+
+.todo-list li.completed { 
+    opacity: 0.5; 
+    color :#795136;
+    text-decoration: line-through; }
+
+.vacation-challenge {
+    margin: 16px 0;
+}
+
+.vacation-challenge h3 {
+    margin: 12px 0 8px 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* initialement 0% */
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+#progress-userA { background-color: #1a3d6d; }  /* remplie User A */
+#progress-userB { background-color: #f5a142; }  /* remplie User B */
+
+.progress-bar-container.userA { background-color: var(--blue); } /* vide User A */
+.progress-bar-container.userB { background-color: var(--honey); } /* vide User B */
+
+/* Couleur du placeholder pour l'utilisateur A */
+.userA .todo-form input::placeholder {
+    color: #f5a142; 
+    opacity: 1; /* pour que la couleur soit bien visible */
+    font-family: "Rammetto One";
+
+}
+
+/* Couleur du placeholder pour l'utilisateur B */
+.userB .todo-form input::placeholder {
+    color: #1a3d6d; /* jaune /orangé */
+    opacity: 1;
+    font-family: "Rammetto One";
+}
+
+
+
+.challenge-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.challenge-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.15s;
+}
+
+.challenge-list li:hover {
+    background: #f8fafb;
+}
+
+/* style global du bouton supprimer */
+.delete-btn {
+  border: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* couleurs spécifiques par utilisateur (hérite de .person.userA / userB) */
+.person.userA .delete-btn {
+  background-color: var(--sky);
+  color: var(--blue);
+}
+
+.person.userB .delete-btn {
+  background-color: var(--lemon);
+  color: var(--honey);
+}
+
+
+/* Quand l'utilisateur tape dans le champ de Quentin */
+.input-userA:focus,
+.input-userA {
+  color: #f5a142 /* bleu foncé pour bien contraster */
+}
+
+/* Quand l'utilisateur tape dans le champ de Typhaine */
+.input-userB:focus,
+.input-userB {
+  color: #1a3d6d; /* orangé lisible */
+}
+
+/* bouton Ajouter — userA */
+#todo-form-userA button,
+.person.userA .todo-form button {
+    font-family: "Rammetto One";
+    background-color: var(--butter);   /* fond */
+    color: #f5a142;                    /* texte */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform .12s ease, opacity .12s ease;
+}
+#todo-form-userA button:hover,
+.person.userA .todo-form button:hover { transform: translateY(-1px); opacity: .95; }
+
+/* bouton Ajouter — userB */
+#todo-form-userB button,
+.person.userB .todo-form button {
+    font-family: "Rammetto One";
+    background-color: var(--sky);  /* fond */
+    color: #1a3d6d;                  /* texte (sombre pour contraste) */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform .12s ease, opacity .12s ease;
+}
+#todo-form-userB button:hover,
+.person.userB .todo-form button:hover { transform: translateY(-1px); opacity: .95; }
+
+
+footer { text-align: center; color: var(--muted); padding: 18px 0 40px; }
+
+@media (max-width: 800px) {
+    .container { grid-template-columns: 1fr; padding: 0 12px; }
+}
